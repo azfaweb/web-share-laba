@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Laporan PDF</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    h3 { color: #333; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #999; padding: 0.5rem; text-align: left; }
+  </style>
+</head>
+<body>
+  <h3>Laporan Pembagian Laba Otomatis</h3>
+  <p><strong>Total Laba:</strong> Rp {{ "{:,.0f}".format(total) }}</p>
+  <table>
+    <tr>
+      <th>Entitas</th>
+      <th>Porsi (%)</th>
+      <th>Bagian (Rp)</th>
+    </tr>
+    <tr>
+      <td>Entitas A</td>
+      <td>{{ porsi_a }}%</td>
+      <td>Rp {{ "{:,.0f}".format(bagian_a) }}</td>
+    </tr>
+    <tr>
+      <td>Entitas B</td>
+      <td>{{ porsi_b }}%</td>
+      <td>Rp {{ "{:,.0f}".format(bagian_b) }}</td>
+    </tr>
+  </table>
+</body>
+</html>
